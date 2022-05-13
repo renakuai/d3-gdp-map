@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
+:root {
+  --h1: 700 3rem 'Inter';
+  --h2: 700 2.5rem 'Inter' ;
+  --h3: 700 2.15rem 'Inter';
+  --h4: 500 1rem 'Inter';
+  --h5: 600 0.8rem 'Inter';
+  --h6: 300 0.85rem 'Inter';
+  --body: 500 1rem 'Inter';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

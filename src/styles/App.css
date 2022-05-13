@@ -1,0 +1,245 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(24px,1fr) minmax(400px,1400px) minmax(24px,1fr);
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.App > * {
+  grid-column: 2 / -2;
+}
+
+.Proj {
+  flex-grow: 1;
+}
+
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+h4 {
+  font: var(--h4);
+  margin-bottom:0.5rem;
+  margin-top:0.5rem;
+}
+
+h5 {
+  font: var(--h5);
+  text-transform: uppercase;
+  margin-bottom:1rem;
+  margin-top:0.5rem;
+}
+
+h6 {
+  font: var(--h6);
+  margin-bottom:0.5rem;
+  margin-top:0.5rem;
+}
+
+p {
+  font-weight: 300;
+  margin-top:0;
+  margin-bottom:1rem;
+}
+
+.Comparing--Countries, .Theme__blue {
+  --dark-blue-bg: #2F3850;
+  --grey-blue: #959EB5;
+  --color: #fff;
+  --light-grey: #F2F2F2;
+  --text-grey: #A9B0C5;
+  --text-black: #25252B;
+  --border-blue: #141B30;
+  --light-blue-bg: #4F5B7C;
+  --border-grey: #4C5675;
+}
+
+.Comparing--Countries, .Theme__blue {
+  background-color: var(--dark-blue-bg);
+  color: var(--color);
+  min-height: 100vh;
+}
+
+.Nav__list,
+.Nav__list > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.Nav__list li a,
+.Nav__list li a:active,
+.Nav__list li a:visited {
+  text-decoration: none;
+}
+
+.Nav__list li a:hover {
+  text-decoration: underline;
+}
+
+.Theme__blue a {
+  color: var(--text-grey);
+}
+
+.Theme__blue h4 {
+  color: #fff;
+}
+
+.Theme__blue h5 {
+  color: var(--text-grey);
+}
+
+.Theme__blue a.Active {
+  color: #fff;
+}
+
+header.App__header {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.Comparing--Countries header {
+  margin-bottom: 2rem;
+}
+
+.App__header > h1 {
+  text-align: left;
+}
+
+/*COMPARING COUNTRIES*/
+
+.Comparing--Countries button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-right: 0.5px solid #fff;
+  border-top: 0.5px solid #fff;
+  border-bottom: 0.5px solid #fff;
+  border-left: none;
+  color: #fff;
+  background-color: var(--dark-blue-bg);
+  cursor: pointer;
+  margin: 0;
+}
+
+.Comparing--Countries nav.Year__nav:first-child {
+  border-left: 0.5px solid #fff;
+}
+
+nav.Year__nav {
+  margin-bottom: 3rem;
+}
+
+button.Active--year {
+  background-color: var(--light-blue-bg);
+}
+
+.Tooltip {
+  position: relative;
+  width: 216px;
+  border-radius: 3px;
+  padding: 0.75rem;
+  background-color: #fff;
+  color: var(--text-black);
+  text-align: center;
+  box-sizing: border-box;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-name: Appear;
+  animation-duration: 250ms;
+  opacity: 0;
+}
+
+@keyframes Appear {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.Tooltip__text {
+  font-size: 0.75rem;
+  margin: 0 0;
+}
+
+.Tooltip__data {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.Tooltip > h5 {
+  margin-bottom: 0.15rem;
+  margin-top: 0;
+}
+
+svg#Map {
+  margin-bottom: 3rem;
+}
+
+svg#Map > path {
+  fill-opacity: 0;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-name: Fillin;
+  animation-duration: 250ms;
+}
+
+@keyframes Fillin {
+  from {
+    fill-opacity: .25;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+svg#Map > path:hover {
+  box-sizing: border-box;
+  stroke: var(--border-blue);
+  stroke-width: 2.5;
+}
+
+table {
+  margin-bottom: 8rem;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+th, td {
+  padding-top: 1rem;
+  padding-bottom:1rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+th {
+  color: var(--text-grey);
+  font-size: 0.8rem;
+}
+
+.Col__bold {
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
